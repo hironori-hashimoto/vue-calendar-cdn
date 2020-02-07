@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calendar Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id='app'>
+        <v-calendar :attributes="attrs" is-expanded></v-calendar>    
+      </div>
+
+
+
+<script src='https://unpkg.com/v-calendar'></script>
+<script>
+new Vue({
+  el: '#app',
+  data: { 
+    attrs: [
+        {
+          key: 'today',
+          highlight: {
+            animated: true,
+            height: '1.8rem',
+            backgroundColor: 'red',
+            borderColor: null,
+            borderWidth: '1px',
+            borderStyle:'solid',
+            borderRadius:'1.8rem',
+            opacity: 1
+          },
+          dates: new Date(),
+          popover: {
+            label: '内容を表示できます',
+          },
+        }
+    ],
+  }
+})
+</script>
+<style>
+  body {
+  background: #20262E;
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+#app {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+
+</style>
+</body>
+</html>
